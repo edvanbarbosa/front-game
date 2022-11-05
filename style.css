@@ -67,6 +67,9 @@ body{
     border-radius: 0.2em;
 }
 .player_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border:  4px solid rgba(255, 255, 255, 0.681);
     text-align: center;
 }

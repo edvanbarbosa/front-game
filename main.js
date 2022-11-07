@@ -1,6 +1,6 @@
 let select_p = document.querySelectorAll('.p_front')
 let player_name = document.querySelector('.name')
-let colors = document.querySelectorAll('.colors > .line_color > div')
+let colors = document.querySelectorAll('.color')
 
 
 select_p.forEach(e =>{
@@ -24,7 +24,7 @@ p1_front.addEventListener('click',()=>{
             
             background_p1 = color.style.background
             p1_front.style.background = background_p1
-    background_p2 = background_p2
+            background_p2 = background_p2
 
         })
     })
@@ -34,8 +34,10 @@ p1_front.addEventListener('click',()=>{
 }
 )
 p2_front.addEventListener('click',()=>{
-    
-    colors.forEach(col =>{
+
+    let coloris = document.getElementsByClassName('color')
+    coloris.className = 'colors_p2'
+    colors_p2.forEach(col =>{
         col.addEventListener('click',()=>{
             
             background_p2 = col.style.background
@@ -48,6 +50,7 @@ p2_front.addEventListener('click',()=>{
    
     p2_front.style.border = '4px solid white'
     p1_front.style.border = 'none'
+    colors_p2.className = 'colors'
 
 }
 )

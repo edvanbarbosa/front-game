@@ -275,6 +275,23 @@ body{
 .modes_card .button{
     margin-top: 4em;
 }
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    z-index: -1 !important;
+    height: 100vh;
+    margin-top:-100vh;
+    width: 100% ;
+    
+}
+.player_one{
+    width: 4em;
+    height: 4em;
+    color: rgba(255, 255, 255, 0.363);
+    background-image: linear-gradient(to top, blueviolet, violet) ;
+}
 
 
 

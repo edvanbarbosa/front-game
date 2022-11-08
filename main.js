@@ -1,59 +1,74 @@
 let select_p = document.querySelectorAll('.p_front')
 let player_name = document.querySelector('.name')
-let colors = document.querySelectorAll('.color')
+let colors_p1 = document.querySelectorAll('.colors_p1 .color')
+let colors_p2 = document.querySelectorAll('.colors_p2 .color')
+var player_name1 = 'P1'
+var player_name2 = 'P2'
+var msg = document.querySelector('.msg')
 
 
-select_p.forEach(e =>{
-    e.addEventListener('click',()=>{
-        player_name.innerHTML = e.innerHTML
-        
-    })
-})
-
-let p1_front = document.getElementById('p1_front')
-let p2_front = document.getElementById('p2_front')
-var background_p1 = ''
-var background_p2 = ''
 p1_front.addEventListener('click',()=>{
-    
+    //propiedades relacionadas a nick
     p1_front.style.border = '4px solid white'
     p2_front.style.border = 'none'
-    
-    colors.forEach(color =>{
-        color.addEventListener('click',()=>{
-            
-            background_p1 = color.style.background
-            p1_front.style.background = background_p1
-            background_p2 = background_p2
+    document.querySelector('.colors_p2').style.display = 'none'
+    document.querySelector('.colors_p1').style.display = 'flex'
 
-        })
-    })
-    
-
-
-}
-)
-p2_front.addEventListener('click',()=>{
-
-    let coloris = document.getElementsByClassName('color')
-    coloris.className = 'colors_p2'
-    colors_p2.forEach(col =>{
-        col.addEventListener('click',()=>{
-            
-            background_p2 = col.style.background
-            p2_front.style.background = background_p2
-            
-            
-    
-        })
-    })
    
+    colors_p1.forEach(color =>{
+        color.addEventListener('click',()=>{
+            p1_front.style.background = color.style.background
+
+        })
+    })
+     //propiedades relacionadas ao nome
+     
+     msg.style.display = 'none'
+     document.querySelector('.name2').style.display = 'none'
+     document.querySelector('.name1').style.display = 'block'
+     document.querySelector('.name1').focus()
+    
+     //
+})
+p2_front.addEventListener('click',()=>{
+    //propiedades relacionadas a nick
     p2_front.style.border = '4px solid white'
     p1_front.style.border = 'none'
-    colors_p2.className = 'colors'
+    document.querySelector('.colors_p1').style.display = 'none'
+    document.querySelector('.colors_p2').style.display = 'flex'
 
+    colors_p2.forEach(col =>{
+        col.addEventListener('click',()=>{
+
+            p2_front.style.background = col.style.background
+
+        })
+    })
+    
+    //Propiedades relacionadas ao nome
+    
+    msg.style.display = 'none' 
+    document.querySelector('.name1').style.display = 'none'
+    document.querySelector('.name2').style.display = 'block'
+    document.querySelector('.name2').focus()
 }
 )
+
+//propiedade relacionada ao nome
+document.querySelector('.front').addEventListener('keypress', (event)=>{
+        
+    if(event.key === 'Enter'){
+        
+        document.querySelector('.name1').blur()
+        document.querySelector('.name2').blur()
+        player_name1 = document.querySelector('.name1').value
+        player_name2 = document.querySelector('.name2').value
+        document.querySelector('.name1').value = player_name1
+        document.querySelector('.name2').value = player_name2
+        console.log(player_name1,player_name2)
+    }
+})
+
 
 
 

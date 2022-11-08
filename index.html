@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!----------------------------------------->
     <link rel="stylesheet" href="style.css">
     <title>Desafio front-game</title>
 </head>
@@ -12,7 +14,9 @@
         <section class="players_front">
             <div class="division">
                 <section class="player_name">
-                    <p class="name">P1</p>
+                    <p class="msg">Select a Player</p>
+                    <input class="name1" type="text" name="player_name1" id="player_name1" placeholder="Name..." maxlength="10">
+                    <input class="name2" type="text" name="player_name2" id="player_name2" placeholder="Name..." maxlength="10">
                 </section>
                 <section class="players_select">
                     <div class="p_front" id="p1_front"> P1</div>
@@ -25,7 +29,25 @@
                 <section class="title_colors">
                     <p>Colors</p>
                 </section>
-                <section class="colors">
+                <section class="colors_p1">
+                    <div class="line_color">
+                        <div class=color style="background: blueviolet ;"></div>
+                        <div class=color style="background: pink;"></div>
+                        <div class=color style="background:#f60f ;"></div>
+                        <div class=color style="background:#a45f ;"></div>
+                        <div class=color style="background: rgb(11, 252, 123);"></div>
+                        <div class=color style="background: rgb(27, 89, 169);"></div>
+                    </div>
+                    <div class="line_color">
+                        <div class=color style="background:#262626 "></div>
+                        <div class=color style="background: rgba(237, 232, 232, 0.871);"></div>
+                        <div class=color style="background:#A7D9AA ;"></div>
+                        <div class=color style="background: #D9043D;"></div>
+                        <div class=color style="background: #4F4D8C;"></div>
+                        <div class=color style="background: #87BF34;"></div>
+                    </div>
+                </section>
+                <section class="colors_p2">
                     <div class="line_color">
                         <div class=color style="background: blueviolet ;"></div>
                         <div class=color style="background: pink;"></div>
@@ -45,8 +67,12 @@
                 </section>
             </div>
         </section>
-        <section class="play">
-            <button class="button_play">Play</button>
+        <section class="button">
+            <button class="button_next">
+                Next <span class="material-symbols-outlined">
+                    arrow_forward</span>
+            </button>
+
         </section>
     </section>
     <section class="game">

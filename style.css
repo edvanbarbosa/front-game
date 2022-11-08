@@ -6,7 +6,12 @@
 }
 
 @font-face {
-    font-family: 'gameplay' ;
+    font-family: 'gamer' ;
+    src: url('fontes/gamer_2/Gamer.ttf');
+}
+
+@font-face {
+    font-family: 'gameplay';
     src: url('fontes/Gameplay.ttf');
 }
 
@@ -106,7 +111,7 @@ body{
     height: 100%;
     
 }
-.colors{
+.colors_p1, .colors_p2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +119,11 @@ body{
     background-color: rgba(255, 255, 255, 0.178);
     height: 16em;
     box-shadow: 2px 2px 7px rgba(255, 249, 249, 0.073);
+}
+
+.colors_p2{
+    
+    display: none
 }
 .line_color{
     display: flex;
@@ -134,8 +144,8 @@ body{
 .player_name, .title_colors{
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    padding-left: 2em;
     background-color: rgba(255, 255, 255, 0.178);
     margin-bottom: 1em;
     height: 4em;
@@ -143,19 +153,23 @@ body{
     border-image: linear-gradient(to right, blueviolet, violet) ;
     border-image-slice: 1;
 }
-.player_name >p, .title_colors > p {
+.title_colors > p {
     font-family: 'gameplay';
     font-size: 1.4em;
     font-weight: bold;
     color: white;
+    letter-spacing: 0.1em;
 }
-.play{
+.button{
     grid-area: play;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.button_play{
+.button_next{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5em;
     background: blueviolet;
     font-family: 'gameria';
@@ -164,11 +178,47 @@ body{
     color: rgba(255, 255, 255, 0.621);
     transition: 0.6s ease-in-out;
 }
-.button_play:hover{
+.button_next:hover{
     top: -0.3em;
     transform: scale(1.1);
     color: rgba(255, 255, 255, 0.835);
 }
+
+.name1, .name2, .player_name > p{
+    width: 90%;
+    height: 90%;
+    font-family: 'gameplay';
+    border: none;
+    text-align: center;
+    background:  transparent;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 0.1em;
+    text-align: start;
+    
+}
+.name1, .name2{
+    display: none;
+}
+.name1::placeholder, .name2::placeholder{
+    color: rgba(255, 255, 255, 0.784);
+    font-size: 0.9em;
+    text-align: start;
+}
+.name1:focus, .name2:focus{
+    
+    outline: none;
+    
+}
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 

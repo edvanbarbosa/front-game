@@ -15,8 +15,6 @@
     src: url('fontes/Gameplay.ttf');
 }
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -33,8 +31,9 @@ body{
      "players_front colors"
      "play play"
      ;
-     grid-template-rows: 70% 30%;
-    background-color: rgba(255, 255, 255, 0.276);
+    background-color: rgba(128, 128, 128, 0.065);
+    grid-template-rows: 70% 30%;
+    backdrop-filter: blur(10px);
     width: 100%;
     height: 100%;
 }
@@ -141,7 +140,7 @@ body{
 .line_color> div:hover{
     opacity: 0.8;
 }
-.player_name, .title_colors{
+.player_name, .title_colors,.title_modes_card{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -166,7 +165,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-.button_next{
+.button_next,.button_play{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +177,7 @@ body{
     color: rgba(255, 255, 255, 0.621);
     transition: 0.6s ease-in-out;
 }
-.button_next:hover{
+.button_next:hover, .button_play:hover{
     top: -0.3em;
     transform: scale(1.1);
     color: rgba(255, 255, 255, 0.835);
@@ -218,6 +217,65 @@ body{
     justify-content: center;
     align-items: center;
 }
+.modes{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.065);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+}
+
+.modes_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30em;
+    height: 100%;
+}
+.title_modes_card >h2{
+    font-family: 'gameplay';
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1em;
+}
+.title_modes_card{
+    width: 100%;
+}
+
+.modes_options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.178);
+}
+.option{
+    display: flex;
+    align-items: center;
+    padding:2.2em 2em ;
+    background-image: linear-gradient(to bottom, violet, blueviolet);
+    backdrop-filter: opacity(20%);
+    height: 60%;
+    width: 90%;
+    border-radius: 0.324em;
+    font-family: 'gameplay';
+    color: rgba(255, 255, 255, 0.547);
+    transition: 0.3s ease-in-out;
+}
+.option:hover{
+    color: rgba(255, 255, 255, 0.64);
+    transform: scale(1.04);
+}
+.modes_card .button{
+    margin-top: 4em;
+}
+
 
 
 

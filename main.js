@@ -5,6 +5,9 @@ let colors_p2 = document.querySelectorAll('.colors_p2 .color')
 var player_name1 = 'P1'
 var player_name2 = 'P2'
 var msg = document.querySelector('.msg')
+var player_select1= document.querySelector('.name1')
+var player_select2 = document.querySelector('.name2')
+var button_next = document.querySelector('.button_next')
 
 
 p1_front.addEventListener('click',()=>{
@@ -23,10 +26,10 @@ p1_front.addEventListener('click',()=>{
     })
      //propiedades relacionadas ao nome
      
-     msg.style.display = 'none'
-     document.querySelector('.name2').style.display = 'none'
-     document.querySelector('.name1').style.display = 'block'
-     document.querySelector('.name1').focus()
+    msg.style.display = 'none'
+    player_select2.style.display = 'none'
+    player_select1.style.display = 'block'
+    player_select1.focus()
     
      //
 })
@@ -48,9 +51,9 @@ p2_front.addEventListener('click',()=>{
     //Propiedades relacionadas ao nome
     
     msg.style.display = 'none' 
-    document.querySelector('.name1').style.display = 'none'
-    document.querySelector('.name2').style.display = 'block'
-    document.querySelector('.name2').focus()
+    player_select1.style.display = 'none'
+    player_select2.style.display = 'block'
+    player_select2.focus()
 }
 )
 
@@ -59,14 +62,19 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         
     if(event.key === 'Enter'){
         
-        document.querySelector('.name1').blur()
-        document.querySelector('.name2').blur()
-        player_name1 = document.querySelector('.name1').value
-        player_name2 = document.querySelector('.name2').value
-        document.querySelector('.name1').value = player_name1
-        document.querySelector('.name2').value = player_name2
-        console.log(player_name1,player_name2)
+        player_select1.blur()
+        player_name2.blur()
+        player_name1 = player_select1.value
+        player_name2 = player_name2.value
+        player_select1.value = player_name1
+        player_select2.value = player_name2
+
     }
+})
+
+button_next.addEventListener('click',()=>{
+    document.querySelector('.front').style.display = 'none'
+    document.querySelector('.modes').style.display = 'flex'
 })
 
 

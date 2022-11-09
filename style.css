@@ -23,7 +23,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(4, 8, 49);
+    background-color: rgb(17, 4, 49);
 }
 .front{
     display: grid;
@@ -280,17 +280,37 @@ body{
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    z-index: -1 !important;
     height: 100vh;
-    margin-top:-100vh;
+    z-index: -1;
+    margin-top:-100vh ;
     width: 100% ;
     
 }
-.player_one{
-    width: 4em;
-    height: 4em;
+.players{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vh;
+    height: 100vh;
+}
+.player_one, .player_two{
+    display: flex;
+    top:40px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'gameria';
+    font-size: 1.2em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.708);
+}
+.player_one>div, .player_two >div{
+    padding: 0.93em;
     color: rgba(255, 255, 255, 0.363);
-    background-image: linear-gradient(to top, blueviolet, violet) ;
+    background: linear-gradient(to top, blueviolet, violet) ;
+}
+label{
+    margin-bottom: 1em;
 }
 
 

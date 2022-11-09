@@ -1,13 +1,16 @@
-let select_p = document.querySelectorAll('.p_front')
-let player_name = document.querySelector('.name')
-let colors_p1 = document.querySelectorAll('.colors_p1 .color')
-let colors_p2 = document.querySelectorAll('.colors_p2 .color')
+var select_p = document.querySelectorAll('.p_front')
+var player_name = document.querySelector('.name')
+var colors_p1 = document.querySelectorAll('.colors_p1 .color')
+var colors_p2 = document.querySelectorAll('.colors_p2 .color')
 var player_name1 = 'P1'
 var player_name2 = 'P2'
 var msg = document.querySelector('.msg')
 var player_select1= document.querySelector('.name1')
 var player_select2 = document.querySelector('.name2')
 var button_next = document.querySelector('.button_next')
+var player1 = document.querySelector('.player_one > div')
+var player2 = document.querySelector('.player_two > div')
+
 
 
 p1_front.addEventListener('click',()=>{
@@ -21,6 +24,7 @@ p1_front.addEventListener('click',()=>{
     colors_p1.forEach(color =>{
         color.addEventListener('click',()=>{
             p1_front.style.background = color.style.background
+            player1.style.background = color.style.background
 
         })
     })
@@ -40,10 +44,11 @@ p2_front.addEventListener('click',()=>{
     document.querySelector('.colors_p1').style.display = 'none'
     document.querySelector('.colors_p2').style.display = 'flex'
 
-    colors_p2.forEach(col =>{
-        col.addEventListener('click',()=>{
+    colors_p2.forEach(color =>{
+        color.addEventListener('click',()=>{
 
-            p2_front.style.background = col.style.background
+            p2_front.style.background = color.style.background
+            player2.style.background = color.style.background
 
         })
     })
@@ -57,17 +62,31 @@ p2_front.addEventListener('click',()=>{
 }
 )
 
-//propiedade relacionada ao nome
+
 document.querySelector('.front').addEventListener('keypress', (event)=>{
-        
+    //propiedade relacionada ao nome  
     if(event.key === 'Enter'){
         
         player_select1.blur()
-        player_name2.blur()
+        player_select2.blur()
         player_name1 = player_select1.value
-        player_name2 = player_name2.value
+        player_name2 = player_select2.value
         player_select1.value = player_name1
         player_select2.value = player_name2
+
+        if(player_name1.length >0){
+            document.querySelector('.label_p1').innerHTML = player_name1
+        }
+        if(player_name2.length >0){
+            document.querySelector('.label_p2').innerHTML = player_name2
+        }
+    //propiedades relacionadas à posição dos personagens
+    var position1_x = 0
+    var position1_y = 0
+    var position2_x = 0
+    var position2_y = 0
+
+       
 
     }
 })
@@ -76,6 +95,26 @@ button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
 })
+
+var button_play = document.querySelector('.button_play')
+var mode_run = document.querySelector('#run_mode')
+
+function runMode(){
+    
+}
+
+button_play.addEventListener('click',function game(){
+    document.querySelector('.modes').style.display = 'none' 
+    document.querySelector('.game').style.margin = '0px'
+
+})
+
+
+
+
+
+
+
 
 
 

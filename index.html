@@ -15,8 +15,8 @@
             <div class="division">
                 <section class="player_name">
                     <p class="msg">Select a Player</p>
-                    <input class="name1" type="text" name="player_name1" id="player_name1" placeholder="Name..." maxlength="16">
-                    <input class="name2" type="text" name="player_name2" id="player_name2" placeholder="Name..." maxlength="16">
+                    <input class="name1" type="text" name="player_name1" id="player_name1" placeholder="Name..." autocomplete="false" maxlength="16">
+                    <input class="name2" type="text" name="player_name2" id="player_name2" placeholder="Name..."  maxlength="16">
                 </section>
                 <section class="players_select">
                     <div class="p_front" id="p1_front"> P1</div>
@@ -80,7 +80,7 @@
                 <h2>Modes</h2>
             </section>
             <section class="modes_options">
-                <div class="option">Run out of time</div>
+                <div class="option" id="run_mode">Run out of time</div>
             </section>
             <section class="button">
                 <button class="button_play">Play</button>
@@ -89,8 +89,15 @@
     </section>
     <section class="game">
         <section class="players">
-            <div class="player_one">P1</div>
-            <div class="Player_two">P2</div>
+            <div class="player_one">
+                <label class="label_p1" for="p1">Player 1</label>
+                <div name="p1"></div>
+            </div>
+
+            <div class="player_two">
+                <label class="label_p2" for="p2">Player 2</label>
+                <div name="p2"></div>
+            </div>
         </section>
     </section>
     <script src="main.js"></script>

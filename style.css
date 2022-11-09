@@ -279,6 +279,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: transparent;
     z-index: -1 !important;
     height: 100vh;
@@ -286,11 +287,77 @@ body{
     width: 100% ;
     
 }
-.player_one{
-    width: 4em;
-    height: 4em;
+
+.players{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.player{
+    text-align: center;
+    font-family: 'gamer';
+    color: white;
+    font-size: 1.6em;
+}
+.player > p{
+    margin-bottom: 8px;
+}
+.player_one, .player_two{
+    position: relative;
+    z-index: -1 !important;
+    padding: 0.6em;
     color: rgba(255, 255, 255, 0.363);
     background-image: linear-gradient(to top, blueviolet, violet) ;
+}
+.flash_bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2em;
+    background-color: rgba(255, 255, 255, 0.178);
+    margin-bottom: 1em;
+    height: 6em;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, blueviolet, violet,rgb(90, 164, 189)) ;
+    border-image-slice: 1;
+    width: 100%;
+}
+.progress_players{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+progress{
+    -webkit-appearance: none;
+ }
+ progress::-webkit-progress-bar {
+     background: black;
+     border-radius: 50px;
+     padding: 2px;
+ }
+ progress::-moz-progress-bar {  
+     background: black;
+     border-radius: 50px;
+     padding: 2px;
+ }
+ progress[value] {
+     appearance: none; 
+     border: none;       
+     }
+progress[value]::-webkit-progress-value {
+    background-image:linear-gradient(to right, blueviolet, violet,rgb(122, 196, 220));
+    border-radius: 3em;
+    transition:  1s ease-in-out;
+}
+.progress_player{
+    display: flex;
+    width: 50%;
+    color: white;
+    font-family: 'gameria';
 }
 
 

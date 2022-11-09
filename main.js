@@ -57,7 +57,6 @@ p2_front.addEventListener('click',()=>{
 }
 )
 
-//propiedade relacionada ao nome
 document.querySelector('.front').addEventListener('keypress', (event)=>{
         
     if(event.key === 'Enter'){
@@ -70,12 +69,22 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         player_select2.value = player_name2
 
     }
+    
+
 })
 
 button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
 })
+
+document.querySelector('.button_play').addEventListener('click',()=>{
+    document.querySelector('.game').style.margin = 0
+    document.querySelector('.front').style.display = 'none'
+    document.querySelector('.modes').style.display = 'none'
+})
+
+
 
 
 

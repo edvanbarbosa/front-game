@@ -62,7 +62,7 @@ p2_front.addEventListener('click',()=>{
 }
 )
 
-
+//propiedade relacionada ao nome
 document.querySelector('.front').addEventListener('keypress', (event)=>{
     //propiedade relacionada ao nome  
     if(event.key === 'Enter'){
@@ -89,32 +89,14 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
        
 
     }
+    
+
 })
 
 button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
 })
-
-var button_play = document.querySelector('.button_play')
-var mode_run = document.querySelector('#run_mode')
-
-function runMode(){
-    
-}
-
-button_play.addEventListener('click',function game(){
-    document.querySelector('.modes').style.display = 'none' 
-    document.querySelector('.game').style.margin = '0px'
-
-})
-
-
-
-
-
-
-
 
 
 

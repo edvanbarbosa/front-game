@@ -295,7 +295,10 @@ body{
     width: 100%;
 }
 .player{
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: 'gamer';
     color: white;
     font-size: 1.6em;
@@ -306,7 +309,8 @@ body{
 .player_one, .player_two{
     position: relative;
     z-index: -1 !important;
-    padding: 0.6em;
+    width: 26px;
+    height: 26px;
     color: rgba(255, 255, 255, 0.363);
     background: linear-gradient(to top, blueviolet, violet) ;
 }

@@ -330,9 +330,6 @@ body{
     width: 30%;
 }
 
-progress{
- -webkit-appearance: none;
- }
  progress::-webkit-progress-bar {
      background: black;
      border-radius: 50px;

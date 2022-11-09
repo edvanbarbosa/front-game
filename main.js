@@ -8,6 +8,7 @@ var msg = document.querySelector('.msg')
 var player_select1= document.querySelector('.name1')
 var player_select2 = document.querySelector('.name2')
 var button_next = document.querySelector('.button_next')
+var button_play = document.querySelector('.button_play')
 var player1 = document.querySelector('.player_one > div')
 var player2 = document.querySelector('.player_two > div')
 
@@ -96,6 +97,10 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
 button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
+})
+button_play.addEventListener('click',()=>{
+    document.querySelector('.modes').style.display = 'none'
+    document.querySelector('.game').style.margin = 0
 })
 
 

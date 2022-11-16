@@ -74,26 +74,73 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         player_name2.innerHTML = input_select2.value
 
     //propiedades relacionadas à posição dos personagens
-    var position1_x = 0
-    var position1_y = 0
-    var position2_x = 0
-    var position2_y = 0
-
-       
-
     }
     
 
 })
+var position1_x = 0
+var position1_y = 0
+var position2_x = 0
+var position2_y = 0
+var option = document.querySelector('.option')
 
 button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
 })
-button_play.addEventListener('click',()=>{
-    document.querySelector('.modes').style.display = 'none'
-    document.querySelector('.game').style.margin = 0
+
+
+option.addEventListener('click',()=>{
+    button_play.style.background = 'blueviolet'
+    button_play.style.color = '#fff'
+
+    button_play.addEventListener('mouseover',()=>{
+        button_play.style.top = '-0.3em'
+        button_play.style.transform = 'scale(1.1)'
+        button_play.style.color = 'rgba(255, 255, 255, 0.835)'
+    })
+    button_play.addEventListener('mouseout',()=>{
+        button_play.style.top = '0'
+        button_play.style.transform = 'scale(1)'
+        button_play.style.color = 'rgba(255, 255, 255, 0.621))'
+    })
+
+    button_play.addEventListener('click',()=>{
+        document.querySelector('.modes').style.display = 'none'
+        document.querySelector('.game').style.margin = 0
+    })
 })
+
+const run_forTime = document.getElementById('run_mode')
+
+    run_forTime.addEventListener('click', function run_forTime(){
+
+
+    })
+var minutos = document.querySelector('.minutes')
+var min = 5
+var segundos = document.querySelector('.seconds')
+var seg = 0
+
+function tempo(){
+    while (min > 0){
+        if (seg == 0){
+            min = min-1
+            seg = 60
+            minutos.innerHTML = min
+        } else{
+        while (seg > 0){
+            seg = seg-1
+            console.log(seg)
+            segundos.innerText = seg
+    
+        }}
+}}
+
+setInterval(function(){
+   tempo()
+},1000)
+
 
 
 

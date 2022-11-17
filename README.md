@@ -1,2 +1,2 @@
 # front-game
-Link for Fron-game: https://edvanbarbosa.github.io/front-game/
+Link for Front-game: https://edvanbarbosa.github.io/front-game/

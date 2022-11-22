@@ -108,38 +108,47 @@ option.addEventListener('click',()=>{
     button_play.addEventListener('click',()=>{
         document.querySelector('.modes').style.display = 'none'
         document.querySelector('.game').style.margin = 0
+
     })
 })
 
+
+
 const run_forTime = document.getElementById('run_mode')
-
-    run_forTime.addEventListener('click', function run_forTime(){
-
-
-    })
 var minutos = document.querySelector('.minutes')
 var min = 5
 var segundos = document.querySelector('.seconds')
 var seg = 0
 
-function tempo(){
-    while (min > 0){
-        if (seg == 0){
-            min = min-1
-            seg = 60
-            minutos.innerHTML = min
-        } else{
-        while (seg > 0){
-            seg = seg-1
-            console.log(seg)
-            segundos.innerText = seg
-    
-        }}
-}}
+    run_forTime.addEventListener('click', function run_forTime(){
+        button_play.addEventListener('click',()=>{
+            tempo()
+        })
+        
 
-setInterval(function(){
-   tempo()
-},1000)
+    })
+
+
+function tempo(){
+    setInterval(function(){
+        
+        if (seg > 0 && min >= 0){
+            seg-= 1
+            segundos.innerHTML = seg
+        }
+        else{
+            minutos.innerHTML = 0
+            segundos.innerHTML = 00
+        }
+        if(seg<1){
+            min -= 1
+            minutos.innerHTML = min
+            seg = 59
+        }
+      
+        
+    },10)
+}
 
 
 

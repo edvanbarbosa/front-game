@@ -308,8 +308,7 @@ body{
     font-size: 1.6em;
     position: relative;
     z-index: -1;
-    height: 100%;
-    width: 100%;
+   transition: 0.01s ease-in-out;
 }
 .player > p{
     margin-bottom: 8px;

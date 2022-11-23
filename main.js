@@ -63,6 +63,10 @@ p2_front.addEventListener('click',()=>{
 }
 )
 
+var position1_x = 0
+var position1_y = 0
+var position2_x = 0
+var position2_y = 0
 //propiedade relacionada ao nome
 document.querySelector('.front').addEventListener('keypress', (event)=>{
     //propiedade relacionada ao nome  
@@ -74,13 +78,10 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         player_name2.innerHTML = input_select2.value
 
     //propiedades relacionadas à posição dos personagens
-    var position1_x = 0
-    var position1_y = 0
-    var position2_x = 0
-    var position2_y = 0
-
-       
-
+    if(event.key === 'w'){
+        position1_y += 100
+        document.querySelector('.player1').style.botton = `${position1_y}px`
+    }
     }
     
 

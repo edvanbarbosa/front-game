@@ -302,6 +302,10 @@ body{
     font-family: 'gamer';
     color: white;
     font-size: 1.6em;
+    position: relative;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 .player > p{
     margin-bottom: 8px;
@@ -359,6 +363,8 @@ progress[value]::-webkit-progress-value {
     color: white;
     font-family: 'gameria';
 }
+
+   
 
 
 

@@ -74,31 +74,126 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         input_select2.blur()
         player_name1.innerHTML = input_select1.value
         player_name2.innerHTML = input_select2.value
-
-    //propiedades relacionadas à posição dos personagens
-    var position1_x = 0
-    var position1_y = 0
-    var position2_x = 0
-    var position2_y = 0
-     if(event.key === 'w'){
-        position1_x += 40
-        player1_body.style.top = `${position1_x}px`
-     }
-       
-
-    }
     
 
-})
+}
+var position1_x = 0
+var position1_y = 0
+var position2_x = 0
+var position2_y = 0
+var body_player1 = document.querySelector('.player1')
+var body_player2 = document.querySelector('.player2')
+document.addEventListener('keydown',(event)=>{
+    //player1 positions
+    if(event.key == 'w'){
+        position1_x -= 10
+        body_player1.style.top = `${position1_x}px`
+
+    }
+    if(event.key == 's'){
+        position1_x += 10
+        body_player1.style.top = `${position1_x}px`
+    }
+    if(event.key == 'a'){
+        position1_y -= 10
+        body_player1.style.left = `${position1_y}px`
+    }
+    if(event.key == 'd'){
+        position1_y += 10
+        body_player1.style.left = `${position1_y}px`
+    }
+
+    //player2 positions
+
+    if(event.key == 'ArrowUp'){
+        position2_x -= 10
+        body_player2.style.top = `${position2_x}px`
+
+    }
+    if(event.key == 'ArrowDown'){
+        position2_x += 10
+        body_player2.style.top = `${position2_x}px`
+    }
+        
+    if(event.key == 'ArrowLeft'){
+        position2_y -= 10
+        body_player2.style.left = `${position2_y}px`
+    }
+        
+    if (event.key == 'ArrowRight'){
+        position2_y += 10
+        body_player2.style.left = `${position2_y}px`
+    }
+}
+)
+
+var option = document.querySelector('.option')
 
 button_next.addEventListener('click',()=>{
     document.querySelector('.front').style.display = 'none'
     document.querySelector('.modes').style.display = 'flex'
 })
-button_play.addEventListener('click',()=>{
-    document.querySelector('.modes').style.display = 'none'
-    document.querySelector('.game').style.margin = 0
+
+
+option.addEventListener('click',()=>{
+    button_play.style.background = 'blueviolet'
+    button_play.style.color = '#fff'
+
+    button_play.addEventListener('mouseover',()=>{
+        button_play.style.top = '-0.3em'
+        button_play.style.transform = 'scale(1.1)'
+        button_play.style.color = 'rgba(255, 255, 255, 0.835)'
+    })
+    button_play.addEventListener('mouseout',()=>{
+        button_play.style.top = '0'
+        button_play.style.transform = 'scale(1)'
+        button_play.style.color = 'rgba(255, 255, 255, 0.621))'
+    })
+
+    button_play.addEventListener('click',()=>{
+        document.querySelector('.modes').style.display = 'none'
+        document.querySelector('.game').style.margin = 0
+
+    })
 })
+
+
+
+const run_forTime = document.getElementById('run_mode')
+var minutos = document.querySelector('.minutes')
+var min = 5
+var segundos = document.querySelector('.seconds')
+var seg = 0
+
+    run_forTime.addEventListener('click', function run_forTime(){
+        button_play.addEventListener('click',()=>{
+            tempo()
+        })
+        
+
+    })
+
+
+function tempo(){
+    setInterval(function(){
+        
+        if (seg > 0 && min >= 0){
+            seg-= 1
+            segundos.innerHTML = seg
+        }
+        else{
+            minutos.innerHTML = 0
+            segundos.innerHTML = 00
+        }
+        if(seg<1){
+            min -= 1
+            minutos.innerHTML = min
+            seg = 59
+        }
+      
+        
+    },10)
+}
 
 
 

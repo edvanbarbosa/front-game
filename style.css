@@ -177,7 +177,11 @@ body{
     color: rgba(255, 255, 255, 0.621);
     transition: 0.6s ease-in-out;
 }
-.button_next:hover, .button_play:hover{
+.button_play{
+    background-color: rgb(131, 128, 128);
+    color: rgba(198, 198, 198, 0.621);
+}
+.button_next:hover{
     top: -0.3em;
     transform: scale(1.1);
     color: rgba(255, 255, 255, 0.835);
@@ -303,6 +307,9 @@ body{
     font-family: 'gamer';
     color: white;
     font-size: 1.6em;
+    position: relative;
+    z-index: -1;
+   transition: 0.01s ease-in-out;
 }
 .player > p{
     margin-bottom: 8px;
@@ -321,7 +328,6 @@ body{
     justify-content: flex-start;
     padding-left: 2em;
     background-color: rgba(255, 255, 255, 0.178);
-    margin-bottom: 1em;
     height: 6em;
     border-bottom: 4px solid transparent;
     border-image: linear-gradient(to right, blueviolet, violet,rgb(90, 164, 189)) ;
@@ -360,6 +366,17 @@ progress[value]::-webkit-progress-value {
     color: white;
     font-family: 'gameria';
 }
+.time_container{
+    display: flex;
+}
+.time{
+    font-family: 'gameria';
+    background-color: rgb(229, 225, 225);
+    color:rgba(0, 0, 0, 0.295) ;
+    padding: 0.4em 1.4em;
+}
+
+   
 
 
 

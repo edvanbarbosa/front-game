@@ -291,7 +291,7 @@ body{
     width: 100% ;
     
 }
-.players{
+.game-players{
     display: flex;
     justify-content: space-evenly;
     align-items: center;

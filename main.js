@@ -1,16 +1,23 @@
 var select_p = document.querySelectorAll('.p_front')
 var player_name = document.querySelector('.name')
+//
 var colors_p1 = document.querySelectorAll('.colors_p1 .color')
 var colors_p2 = document.querySelectorAll('.colors_p2 .color')
+//
 var player_name1 = document.querySelector('.player_name1')
 var player_name2 = document.querySelector('.player_name2')
+//
 var msg = document.querySelector('.msg')
+//
 var input_select1= document.querySelector('.name1')
 var input_select2 = document.querySelector('.name2')
+//
 var button_next = document.querySelector('.button_next')
 var button_play = document.querySelector('.button_play')
+//
 var player1 = document.querySelector('.player_one')
 var player2 = document.querySelector('.player_two')
+//
 var player1_body = document.querySelector('.player1')
 var player2_body = document.querySelector('.player2')
 
@@ -76,7 +83,7 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
         player_name2.innerHTML = input_select2.value
     
 
-}
+}})
 var position1_x = 0
 var position1_y = 0
 var position2_x = 0
@@ -192,9 +199,14 @@ function tempo(){
         }
       
         
-    },10)
+    },1000)
 }
 
-
-
-
+function sizeadjust(){ 
+    const game = document.querySelector('.game-players')
+    width = window.innerWidth
+    height = window.innerHeight
+    
+}
+sizeadjust()
+console.log(width, height)

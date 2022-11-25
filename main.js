@@ -11,6 +11,8 @@ var button_next = document.querySelector('.button_next')
 var button_play = document.querySelector('.button_play')
 var player1 = document.querySelector('.player_one')
 var player2 = document.querySelector('.player_two')
+var player1_body = document.querySelector('.player1')
+var player2_body = document.querySelector('.player2')
 
 
 
@@ -78,7 +80,10 @@ document.querySelector('.front').addEventListener('keypress', (event)=>{
     var position1_y = 0
     var position2_x = 0
     var position2_y = 0
-
+     if(event.key === 'w'){
+        position1_x += 40
+        player1_body.style.top = `${position1_x}px`
+     }
        
 
     }

@@ -90,50 +90,62 @@ var position2_x = 0
 var position2_y = 0
 var body_player1 = document.querySelector('.player1')
 var body_player2 = document.querySelector('.player2')
-document.addEventListener('keydown',(event)=>{
+document.addEventListener('keyup',(event)=>{
     //player1 positions
     if(event.key == 'w'){
-        position1_x -= 10
+        position1_x -= 60
         body_player1.style.top = `${position1_x}px`
 
     }
     if(event.key == 's'){
-        position1_x += 10
+        position1_x += 60
         body_player1.style.top = `${position1_x}px`
     }
     if(event.key == 'a'){
-        position1_y -= 10
+        position1_y -= 60
         body_player1.style.left = `${position1_y}px`
     }
     if(event.key == 'd'){
-        position1_y += 10
+        position1_y += 60
         body_player1.style.left = `${position1_y}px`
     }
+    if(position1_x > 430){
+        position1_x = -640
+        
+    }
+    position1_x 
+    position1_y
+    position1_y
 
-    //player2 positions
 
-    if(event.key == 'ArrowUp'){
-        position2_x -= 10
+
+   
+}
+)
+document.addEventListener('keyup', (event)=>{
+     //player2 positions
+
+     if(event.key == 'ArrowUp'){
+        position2_x -= 60
         body_player2.style.top = `${position2_x}px`
 
     }
     if(event.key == 'ArrowDown'){
-        position2_x += 10
+        position2_x += 60
         body_player2.style.top = `${position2_x}px`
     }
         
     if(event.key == 'ArrowLeft'){
-        position2_y -= 10
+        position2_y -= 60
         body_player2.style.left = `${position2_y}px`
     }
         
     if (event.key == 'ArrowRight'){
-        position2_y += 10
+        position2_y += 60
         body_player2.style.left = `${position2_y}px`
     }
-}
-)
-
+    position2_y 
+})
 var option = document.querySelector('.option')
 
 button_next.addEventListener('click',()=>{

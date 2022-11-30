@@ -309,7 +309,7 @@ body{
     font-size: 1.6em;
     position: relative;
     z-index: -1;
-   transition: 0.01s ease-in-out;
+   transition: 0.2s ease-in-out;
 }
 .player > p{
     margin-bottom: 8px;
@@ -327,11 +327,12 @@ body{
     align-items: center;
     justify-content: flex-start;
     padding-left: 2em;
-    background-color: rgba(255, 255, 255, 0.178);
     height: 6em;
     border-bottom: 4px solid transparent;
     border-image: linear-gradient(to right, blueviolet, violet,rgb(90, 164, 189)) ;
     border-image-slice: 1;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.178);
     width: 100%;
 }
 .progress_players{

@@ -1,3 +1,9 @@
+import jogo from "./jogo.js"
+
+
+
+
+
 var select_p = document.querySelectorAll('.p_front')
 var player_name = document.querySelector('.name')
 //
@@ -93,20 +99,20 @@ var body_player2 = document.querySelector('.player2')
 document.addEventListener('keyup',(event)=>{
     //player1 positions
     if(event.key == 'w'){
-        position1_x -= 60
+        position1_x -= 30
         body_player1.style.top = `${position1_x}px`
 
     }
     if(event.key == 's'){
-        position1_x += 60
+        position1_x += 30
         body_player1.style.top = `${position1_x}px`
     }
     if(event.key == 'a'){
-        position1_y -= 60
+        position1_y -= 30
         body_player1.style.left = `${position1_y}px`
     }
     if(event.key == 'd'){
-        position1_y += 60
+        position1_y += 30
         body_player1.style.left = `${position1_y}px`
     }
     if(position1_x > 430){
@@ -126,22 +132,22 @@ document.addEventListener('keyup', (event)=>{
      //player2 positions
 
      if(event.key == 'ArrowUp'){
-        position2_x -= 60
+        position2_x -= 30
         body_player2.style.top = `${position2_x}px`
 
     }
     if(event.key == 'ArrowDown'){
-        position2_x += 60
+        position2_x += 30
         body_player2.style.top = `${position2_x}px`
     }
         
     if(event.key == 'ArrowLeft'){
-        position2_y -= 60
+        position2_y -= 30
         body_player2.style.left = `${position2_y}px`
     }
         
     if (event.key == 'ArrowRight'){
-        position2_y += 60
+        position2_y += 30
         body_player2.style.left = `${position2_y}px`
     }
     position2_y 
@@ -201,8 +207,8 @@ function tempo(){
             segundos.innerHTML = seg
         }
         else{
-            minutos.innerHTML = 0
-            segundos.innerHTML = 00
+            minutos.innerHTML = "0"
+            segundos.innerHTML = "00"
         }
         if(seg<1){
             min -= 1
@@ -214,11 +220,6 @@ function tempo(){
     },1000)
 }
 
-function sizeadjust(){ 
-    const game = document.querySelector('.game-players')
-    width = window.innerWidth
-    height = window.innerHeight
-    
-}
-sizeadjust()
-console.log(width, height)
+setInterval(()=>{
+    jogo()
+},3000)
